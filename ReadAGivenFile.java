@@ -10,13 +10,15 @@ public class ReadAGivenFile {
 	public void readFileContent() {
 		try {
 			bufferedReader = new BufferedReader(new FileReader(new File("C:\\Users\\QR824ME\\Desktop\\Poker.txt")));
-
+			String strline ;
 			while (true) {
-				if (bufferedReader.readLine() == null) {
+				if ((strline= bufferedReader.readLine()) == null) {
 					System.out.println("File reading finsihed");
 					break;
 				}
+				PlayersCard.splitLinesFromGivenFile(strline);
 				System.out.println(bufferedReader.readLine());
+				
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
