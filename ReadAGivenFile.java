@@ -16,7 +16,7 @@ public class ReadAGivenFile {
 					System.out.println("File reading finsihed");
 					break;
 				}
-				PlayersCard.splitLinesFromGivenFile(strline);
+				SplitLinesFromGivenFile.splitLinesFromGivenFile(strline);
 				System.out.println(bufferedReader.readLine());
 				
 			}
