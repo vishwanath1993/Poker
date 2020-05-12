@@ -7,7 +7,8 @@ public class SplitLinesFromGivenFile {
 
 		PlayersCard playerCard = new PlayersCard();
 		playerCard.playerCards(cards);
-
+		
 	}
+	
 
 }

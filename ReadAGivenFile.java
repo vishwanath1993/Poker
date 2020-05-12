@@ -17,7 +17,7 @@ public class ReadAGivenFile {
 					break;
 				}
 				SplitLinesFromGivenFile.splitLinesFromGivenFile(strline);
-				System.out.println(bufferedReader.readLine());
+				//System.out.println(bufferedReader.readLine());
 				
 			}
 		} catch (IOException e) {

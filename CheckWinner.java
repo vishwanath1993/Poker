@@ -73,5 +73,76 @@ public class CheckWinner {
 			return 0;
 		}
 	}
+	
+
+	// check for pair
+		public int pair(String[] playerCards)
+		{
+			int check = 0;
+			for(int counter = 1; counter < 5; counter++)
+			{
+				if (playerCards[counter - 1] == playerCards[counter])
+				{
+					check++;
+				}
+			}
+			if (check == 1)
+			{
+				return 1;
+			}
+			else
+			{
+				return 0;
+			}
+		}
+		
+		
+	// checks for a straight flush
+	public int straightFlush(String[] playerCards)
+	{
+
+		String suitTexts = "HCSD";
+		int suitCode = suitTexts.indexOf(playerCards[0].charAt(1));
+
+		for (int counter = 1; counter < 5; counter++) {
+			if (playerCards[0] + suitCode != playerCards[counter] + suitCode) {
+				return 0;
+			}
+		}
+		/*
+		 * for (int counter2 = 1; counter2 < 5; counter2++) { if (playerCards[counter2 -
+		 * 1] != (playerCards[counter2] - 1)) { return 0; }
+		 * 
+		 * }
+		 */
+		return 1;
+
+	}
+
+	// check for straight
+	public int straight(String[] playerCards) {
+		for (int counter2 = 1; counter2 < 5; counter2++) {
+			if (playerCards[counter2 - 1].charAt(0) != (playerCards[counter2].charAt(0) - 1)) {
+				return 0;
+			}
+
+		}
+		return 1;
+	}
+		
+		// find highest card
+		public int highCard(String[] playerCards)
+		{
+			int highCard = 0;
+			for (int counter = 0; counter < 5; counter++)
+			{
+				if (playerCards[counter].charAt(0) > highCard)
+				{
+					highCard = playerCards[counter].charAt(0);
+				}
+			}
+			return highCard;
+		}
+	
 
 }
